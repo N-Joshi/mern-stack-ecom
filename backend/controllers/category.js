@@ -13,12 +13,12 @@ exports.getCategoryParamById = (req,res,next,id) => {
 
 
 exports.createCategory = (req,res) =>{
+    console.log(req.body)
     const category = new Category(req.body)
     category.save((err,category) =>{
         if(err){
             res.status(400).json({error:'Not able to Save Category!!'})
         }
-
         res.json(category)
     })
 }
@@ -33,7 +33,7 @@ exports.getCategories = (req,res) =>{
             res.status(400).json({error:'No categories found !!'})
         }
         res.json(categories)
-        next()
+        
     })
 }
 

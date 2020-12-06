@@ -12,11 +12,10 @@ router.param("productId", getProductParamById)
 //Actual route
 
 router.post('/product/create/:userId', isSignedIn ,isAuthenticated,isAdmin,createProduct)
-
 router.get('/product/:productId',getProduct)
 router.get('/product/image/:productId',image)
 router.get('/products',getAllProducts)
-router.get('produc/categories',getAllProdCategories)
+router.get('product/categories',getAllProdCategories)
 
 //update & delete product
 

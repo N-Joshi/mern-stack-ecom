@@ -41,13 +41,13 @@ function Signin() {
     const performRedirect = () => {
         if(didRedirect){
             if(user && user.role === 1){
-                return <p>ADMIN Redirect</p>
+                return <Redirect to="/admin/dashboard"/>
             }else{
-                return <p>User Dashboard</p>
+                return  <Redirect to="/user/dashboard"/>
             }
         }
-        if(isAuthenticated){
-            return <Redirect to='/' />
+        if(isAuthenticated()){
+           return <Redirect to='/' />
         }
     }
 
@@ -93,7 +93,7 @@ function Signin() {
             {successMessage()}
             {errorMessage()}
             {signInForm()}
-            {/* {performRedirect()} */}
+            {performRedirect()}
             </Base>
         </div>
     )
