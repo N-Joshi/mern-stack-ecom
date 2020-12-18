@@ -9,7 +9,7 @@ function AdminDashBoard() {
 
     const adminLeftCorner = () =>{
         return(
-            <div className="card">
+            <div className="card col-xs-4">
                 <h4 className="card-header bg-dark text-white">Admin Navigation</h4>
                 <ul className="list-group">
                     <li className="list-group-item"><Link className="nav-link text-success" to="/admin/create/category">Create Category</Link></li>
@@ -17,7 +17,6 @@ function AdminDashBoard() {
                     <li className="list-group-item"><Link className="nav-link text-success" to="/admin/create/product">Create Product</Link></li>
                     <li className="list-group-item"><Link className="nav-link text-success" to="/admin/products">Manage Products</Link></li>
                     <li className="list-group-item"><Link className="nav-link text-success" to="/admin/orders">Manage Orders</Link></li>
-                    
                 </ul>
             </div>
         )

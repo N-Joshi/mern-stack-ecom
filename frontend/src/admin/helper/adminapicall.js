@@ -82,7 +82,7 @@ export const deleteProduct = (productId,userId,token) => {
 }
 
 
-export const updateProduct = (userId,token,product,productId) => {
+export const updateProduct = (productId,userId,token,product) => {
     return fetch(`${API}product/${productId}/${userId}`,{
         method:"PUT",
         headers:{
