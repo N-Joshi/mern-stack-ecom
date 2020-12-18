@@ -16,7 +16,7 @@ const UpdateProducts = ({match}) => {
     description: "",
     price: "",
     inventory: "",
-    photo: "",
+    images: "",
     categories: [],
     category: "",
     loading: false,
@@ -89,7 +89,7 @@ const UpdateProducts = ({match}) => {
           name: "",
           description: "",
           price: "",
-          photo: "",
+          images: "",
           inventory: "",
           loading: false,
           createdProduct: data.name
@@ -99,7 +99,7 @@ const UpdateProducts = ({match}) => {
   };
 
   const handleChange = name => event => {
-    const value = name === "photo" ? event.target.files[0] : event.target.value;
+    const value = name === "images" ? event.target.files[0] : event.target.value;
     formData.set(name, value);
     setValues({ ...values, [name]: value });
   };
@@ -115,13 +115,13 @@ const UpdateProducts = ({match}) => {
 
   const createProductForm = () => (
     <form>
-      <span>Post photo</span>
+      <span>Post images</span>
       <div className="form-group">
         <label className="btn btn-block btn-success">
           <input
-            onChange={handleChange("photo")}
+            onChange={handleChange("images")}
             type="file"
-            name="photo"
+            name="images"
             accept="image"
             placeholder="choose a file"
           />
@@ -130,7 +130,7 @@ const UpdateProducts = ({match}) => {
       <div className="form-group">
         <input
           onChange={handleChange("name")}
-          name="photo"
+          name="images"
           className="form-control"
           placeholder="Name"
           value={name}
@@ -139,7 +139,7 @@ const UpdateProducts = ({match}) => {
       <div className="form-group">
         <textarea
           onChange={handleChange("description")}
-          name="photo"
+          name="images"
           className="form-control"
           placeholder="Description"
           value={description}

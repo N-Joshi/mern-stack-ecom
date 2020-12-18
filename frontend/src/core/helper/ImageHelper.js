@@ -3,8 +3,8 @@ import { API } from "../../backend";
 
 const ImageHelper = ({ product }) => {
   const imageurl = product
-    ? `${API}/product/photo/${product._id}`
-    : `https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940`;
+    ? `${API}/product/image/${product._id}`
+    : `https://westsiderc.org/wp-content/uploads/2019/08/Image-Not-Available.png`;
   return (
     <div className="rounded border border-success p-2">
       <img

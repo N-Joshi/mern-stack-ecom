@@ -70,7 +70,7 @@ exports.getProduct = (req,res) =>{
 //middleware for image loading
 exports.image = (req,res,next)=>{
     if(req.product.images.data){
-        res.set("Content-Type",req,product.images.contentType)
+        res.set("Content-Type",req.product.images.contentType)
         return res.send(req.product.images.data)
     }
     next()

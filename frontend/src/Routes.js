@@ -7,6 +7,7 @@ import ManageProducts from './admin/ManageProducts'
 import UpdateProducts from './admin/UpdateProduct'
 import AdminRoutes from './auth/helper/AdminRoutes'
 import PrivateRoutes from './auth/helper/PrivateRoutes'
+import Cart from './core/Cart'
 import Home from './core/Home'
 import AdminDashBoard from './user/AdminDashBoard'
 import Signin from './user/Signin'
@@ -22,6 +23,7 @@ function Routes() {
                <Route path='/' exact component={Home}></Route>
                <Route path='/signin' exact component={Signin}></Route>
                <Route path='/signup' exact component={Signup}></Route>
+               <Route path='/cart' exact component={Cart}></Route>
                 <PrivateRoutes path='/user/dashboard' exact component={UserDashBoard}></PrivateRoutes>
                 <AdminRoutes  path='/admin/dashboard' exact component={AdminDashBoard }></AdminRoutes>
                 <AdminRoutes  path='/admin/create/category' exact component={AddCategory }></AdminRoutes>
